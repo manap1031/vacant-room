@@ -1,0 +1,40 @@
+/* main部分 */
+.background{
+  background-color: floralwhite;  
+  overflow: auto;
+  height: 100vh;
+}
+.main{
+  background-color: khaki;
+  display: flex;
+  height: 100%;
+  margin-top: 60px;
+}
+.header-menu{
+  background-color: black;
+  opacity: .8;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+a{
+  text-decoration: none;
+  color:  rgb(161, 157, 157);
+  font-weight: bold;
+}
+.main-left{
+  background-color: hotpink;
+  width: 20%;
+}
+.main-center{
+  background-color: lightcyan;
+  width: 60%;
+}
+.main-right{
+  background-color: indianred;
+  width: 20%;
+  
+}

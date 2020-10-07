@@ -4,12 +4,29 @@
     <title>VacantRoom</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div id="nav-drawer">
+          <input id="nav-input" type="checkbox" class="nav-unshown">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+          <div id="nav-content">ここに中身を入れる</div>
+      </div>
+
+      <div class="header-title">
+        <h1 class="title"><a href="/">Vacant@Room</a></h1>
+      </div>
+    </header>
+   
     <%= yield %>
+
+    <footer>
+      <p class="footer-title">Copyright vacant@room 2020.</p>
+    </footer>
   </body>
 </html>
