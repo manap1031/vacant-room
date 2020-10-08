@@ -1,0 +1,7 @@
+ <%= form_with(model: @room, local: true) do |form| %>
+      <%= form.file_field :image, placeholder: "Image" %>
+      <%= form.file_field :images, multiple: true, placeholder: "Image" %>
+      <%= form.text_field :room_name, placeholder: "room_name" %>
+      <%= form.text_area :comment, placeholder: "comment", rows: "10" %>
+      <%= form.submit "SEND" %>
+    <% end %>

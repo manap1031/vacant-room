@@ -16,9 +16,20 @@
     </div>
 
     <div class="main-center">
-      <%= @rooms.each do |room| %>
-  
-      <% end %>
+      <ul class="main-list">
+        <li class="main-list1">
+          <% @rooms.each do |room| %>
+            <%= link_to room_path(room.id) do %>
+              <%= image_tag room.image, class: "room-img1" %>
+                <p class="list-name"><%= room.room_name %></p>
+                <p class="list-name"><%= room.comment %></p>
+                <% room.images.each do |image| %>
+                 <%= image_tag image, class: "room-img2"%>
+                <% end %>
+            <% end %>
+          <% end %> 
+        </li>
+      </ul>    
     </div>
 
     <div class="main-right">
