@@ -5,7 +5,7 @@
   height: 100vh;
 }
 .main{
-  background-color: khaki;
+  background-color: darkgray;
   display: flex;
   height: 100%;
   margin-top: 60px;
@@ -29,12 +29,87 @@ a{
   background-color: hotpink;
   width: 20%;
 }
-.main-center{
-  background-color: lightcyan;
-  width: 60%;
-}
+
 .main-right{
   background-color: indianred;
   width: 20%;
-  
+}
+
+/* main-centerの部分 */
+.main-center{
+  background-color: dimgrey;
+  width: 60%;
+}
+.center-list1{
+}
+.center-list2{
+  border: 3px solid #4c4c4c;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.list-box1{
+  display: flex;
+  border: 1px solid #4c4c4c;
+}
+.list-name1{
+  background-color: whitesmoke;
+  border: 1px solid #4c4c4c;
+  width: 40%;
+  font-size: 10px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.list-name2{
+  background-color: whitesmoke;
+  border: 1px solid #4c4c4c;
+  width: 60%;
+  font-size: 10px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.big-img{
+  background-color: whitesmoke;
+  margin: 2px;
+}
+.mini-img{
+  background-color: whitesmoke;
+  border: 2px solid #4c4c4c;
+  margin: 2px;
+}
+.room-img1{
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  border: solid 3px #4c4c4c;
+}
+.room-img2{
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  background-position: center;
+  border: solid 3px #4c4c4c;
+  width: calc(100%/6);
+  margin-top: 2px;
+}
+.btn{
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  color: #4c4c4c;
+  border: solid 2px #4c4c4c;
+  background-color: whitesmoke;
+  cursor: pointer;
+  margin-bottom: 3px;
+  padding-top: 5px;
+}
+.btn:hover{
+  background-color: #4c4c4c;
+  border: solid 2px whitesmoke;
+  color: whitesmoke;
 }
