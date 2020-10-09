@@ -34,8 +34,15 @@ ActiveRecord::Schema.define(version: 2020_10_07_141948) do
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "room_name"
-    t.text "comment"
+    t.string "room_name", null: false
+    t.string "postal_code", null: false
+    t.integer "prefecture_id", null: false
+    t.string "city", null: false
+    t.string "town", null: false
+    t.string "phone_number", null: false
+    t.string "building", null: false
+    t.integer "price", null: false
+    t.text "comment", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

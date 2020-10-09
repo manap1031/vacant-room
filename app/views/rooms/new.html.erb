@@ -41,7 +41,7 @@
           <p class="contents-p">都道府県</p>
         </div>
         <div class="new-contents3">
-         <p class="contents-p2"><%= form.text_field :prefecture_id, class: "new-field" %></p>
+         <p class="contents-p2"><%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"new-field", id:"prefecture"}) %></p>
         </div>
       </div>
 
