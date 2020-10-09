@@ -26,11 +26,28 @@
               <p class="list-name1">都道府県</p>
               <p class="list-name2"><%= room.room_name %></p>
             </div>
+
+            <div class="list-box1">
+              <p class="list-name1">市町村区</p>
+              <p class="list-name2"><%= room.comment %></p>
+            </div>  
+
             <div class="list-box1">
               <p class="list-name1">アパート名</p>
               <p class="list-name2"><%= room.comment %></p>
-            </div>                
+            </div>  
+            
+            <div class="list-box1">
+              <p class="list-name1">連絡先</p>
+              <p class="list-name2"><%= room.comment %></p>
+            </div>  
+            <div class="list-box1">
+              <p class="list-name1">お値段</p>
+              <p class="list-name2"><%= room.comment %></p>
+            </div>  
+
           </div>
+          
           <div class="mini-img">
             <% room.images.each do |image| %>
               <%= image_tag image, class: "room-img2"%>

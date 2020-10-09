@@ -1,7 +1,122 @@
- <%= form_with(model: @room, local: true) do |form| %>
-      <%= form.file_field :image, placeholder: "Image" %>
-      <%= form.file_field :images, multiple: true, placeholder: "Image" %>
-      <%= form.text_field :room_name, placeholder: "room_name" %>
-      <%= form.text_area :comment, placeholder: "comment", rows: "10" %>
-      <%= form.submit "SEND" %>
+<div class="background">
+
+  <div class="new-contents-main">
+    <%= form_with(model: @room, local: true) do |form| %>
+    
+      <h1 class="new-title"><span class="line"></span>貸し部屋を登録</h1>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">メイン画像</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.file_field :image, class: "file-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">サブ画像</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.file_field :images, multiple: true, class: "file-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">貸し部屋名</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :room_name, placeholder: "例:サニーガーデン恵庭", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">都道府県</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :prefecture_id, class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">郵便番号</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :postal_code, placeholder: "注意:ハイフンを含む", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">市区町村</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :city, placeholder: "例:恵庭市栄町", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">番地</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :town, placeholder: "例:1-2-3", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable1">任意</span>
+          <p class="contents-p">建物名</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :building, placeholder: "恵庭ビル3-2", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">電話番号</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :phone_number, placeholder: "例:0123-11-1234", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <div class="new-contents1">
+        <div class="new-contents2">
+          <span class="indispensable">必須</span>
+          <p class="contents-p">時間/金額</p>
+        </div>
+        <div class="new-contents3">
+         <p class="contents-p2"><%= form.text_field :price, placeholder: "例:￥3,000", class: "new-field" %></p>
+        </div>
+      </div>
+
+      <h2 class="comment">その他条件等</h2>
+      <div class="comment1">
+       <div class="comment2">
+        <%= form.text_area :comment, placeholder: "条件", class: "new-comment"%>
+       </div>
+      </div>
+      
+      <div class="new-btn">
+        <%= form.submit "登録する", class: "new-btn1" %>
+      </div>
     <% end %>
+ </div>
+
+</div>
+ 
