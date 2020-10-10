@@ -15,7 +15,39 @@
           <input id="nav-input" type="checkbox" class="nav-unshown">
           <label id="nav-open" for="nav-input"><span></span></label>
           <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-          <div id="nav-content">ここに中身を入れる</div>
+
+          <div id="nav-content">
+            <div class="side-header-title">
+              <div class="side-header-title1">
+                <h1 class="side-title">新規登録</h1>
+              </div>
+              <div class="side-header-title2">
+               <h1 class="side-title1">ログイン/ログアウト</h1>
+              </div>
+            </div>
+
+            <div class="owner-log">
+              <% if owner_signed_in? && current_owner.id %>
+                <div class="owner-log1">
+                  <div class="owner-login">
+                    <%= link_to "ログアウト", destroy_owner_session_path, class: "owner-login1", method: :delete %>
+                  </div>
+                  <div class="owner-login">
+                    <a class="owner-login1" href="/rooms/new">投稿する</a>
+                  </div>
+                </div>
+              <% else%>
+                <div class="owner-log2">
+                  <div class="owner-login">
+                    <%= link_to "ログイン", new_owner_session_path, class: "owner-login1"%>
+                  </div>
+                  <div class="owner-login">
+                    <%= link_to "オーナー登録", new_owner_registration_path, class: "owner-login1"%>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
       </div>
 
       <div class="header-title">

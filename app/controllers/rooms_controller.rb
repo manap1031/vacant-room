@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @rooms = Room.all
@@ -49,4 +50,10 @@ class RoomsController < ApplicationController
     params.require(:room).permit(:room_name, :postal_code, :prefecture_id, :city, :town, :phone_number, :building, :price, :comment, :image, images: [])
   end
 
+  def move_to_index
+    unless owner_signed_in?
+      redirect_to action: :index
+    end
+  end
 end
+
