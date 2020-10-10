@@ -22,12 +22,19 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+     if room = Room.find(params[:id])
+      room.destroy
+      redirect_to root_paty
+     else
+      render :show
+     end
   end
 
   def update
   end
 
   def edit
+    @room = Room.find(parms[:id])
   end
 
   private
