@@ -105,8 +105,11 @@
     </div>
   </div>
 
-  <ul class="show-btn">
-   <li><%= link_to "削除", room_path(@room.id), method: :delete %></li>
-   <li><%= link_to "編集", edit_room_path(@room.id), method: :get %></li>
-  </ul>
+  
+   <div class="show-btn1">
+     <%= link_to "削除", room_path(@room.id), class: "show-btn2", method: :delete %>
+     <%= link_to "編集", edit_room_path(@room.id), class: "show-btn2", method: :get %>
+   </div>  
+  
+
 </div>

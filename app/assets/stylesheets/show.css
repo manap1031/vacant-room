@@ -75,4 +75,28 @@
   border: 3px solid #4C4C4C;
   white-space: pre-wrap;
   font-weight: bold;
+  padding-left: 10px;
+}
+.show-btn1{
+  display: flex;
+}
+.show-btn2{
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  color: #4c4c4c;
+  border: solid 2px #4c4c4c;
+  background-color: whitesmoke;
+  cursor: pointer;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-btn2:hover{
+  background-color: #4c4c4c;
+  border: solid 2px whitesmoke;
+  color: whitesmoke;
 }
