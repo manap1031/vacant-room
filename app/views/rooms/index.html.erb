@@ -42,7 +42,7 @@
               <p class="list-name2"><%= room.phone_number %></p>
             </div>  
             <div class="list-box1">
-              <p class="list-name1">お値段</p>
+              <p class="list-name1">お値段(時間/円)</p>
               <p class="list-name2"><%= room.price %></p>
             </div>  
 
@@ -50,7 +50,9 @@
           
           <div class="mini-img">
             <% room.images.each do |image| %>
+              <%= link_to room_path(room.id) do %>
               <%= image_tag image, class: "room-img2"%>
+            <% end %>
             <% end %>
             <div class="show-btn">
              <%= link_to "詳細", room_path(room.id), class: "btn" %>
