@@ -1,0 +1,112 @@
+<div class="background">
+
+  <ul class="header-menu">
+    <li><a href="#">リスト1</a></li>
+    <li><a href="#">リスト2</a></li>
+    <li><a href="#">リスト3</a></li>
+    <li><a href="#">リスト4</a></li>
+  </ul>
+
+  <div class="show-contents">
+    <div class="show-contents1">
+      <%= image_tag @room.image, class: "show-img1" %>
+    </div>
+    <div class="contents10">
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">貸し部屋名</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.room_name %></p>
+        </div>
+      </div>
+
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">都道府県</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.prefecture.name %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">郵便番号</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.postal_code %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">市区町村</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.city %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">番地</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.town %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">建物名</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.building %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">貸し部屋名</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.room_name %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">連絡先</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.phone_number %></p>
+        </div>
+      </div>
+      <div class="show-contents1-1">
+        <div class="show-contents1-2">
+          <p class="show-p">時間/金額</p>
+        </div>
+        <div class="show-contents1-3">
+          <p class="show-p1"><%= @room.price %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="show-contents2">
+    <div class="show-contents3">
+      <div class="show-contents4">
+       <% @room.images.each do |image| %>
+         <%= image_tag image, class: "show-img2" %>
+       <% end %>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="show-comment">その他条件等</h2>
+  <div class="show-comment1">
+    <div class="show-comment2">
+      <%= @room.comment %>
+    </div>
+  </div>
+
+  <ul class="show-btn">
+   <li><%= link_to "削除", room_path(@room.id), method: :delete %></li>
+   <li><%= link_to "編集", edit_room_path(@room.id), method: :get %></li>
+  </ul>
+</div>
