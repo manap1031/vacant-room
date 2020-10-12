@@ -41,6 +41,10 @@
 .reg-contents-p{
   font-weight: bold;
 }
+.reg-contents-p1{
+  margin: 0 10px;
+  font-weight: bold;
+}
 .reg-contents3{
   background-color: cornsilk;
   width: 300px;

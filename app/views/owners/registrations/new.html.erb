@@ -33,7 +33,8 @@
             <p class="reg-contents-p">性別</p>
           </div>
           <div class="reg-contents3">
-          <p class="reg-contents-p2"><%= f.text_field :gender, class: "reg-field" %></p>
+          <p class="reg-contents-p1"><span>男性</span> <%= f.radio_button :gender, :男性, class: "reg-field1" %></p>
+           <p class="reg-contents-p1"><span>女性</span> <%= f.radio_button :gender, :女性,  class: "reg-field1" %></p>
           </div>
         </div>
         <div class="reg-contents1">
@@ -42,7 +43,17 @@
             <p class="reg-contents-p">誕生日</p>
           </div>
           <div class="reg-contents3">
-          <p class="reg-contents-p2"><%= f.text_field :birthday, class: "reg-field" %></p>
+          <p class="reg-contents-p2"><%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %></p>
           </div>
         </div>
         <div class="reg-contents1">
@@ -83,7 +94,7 @@
         </div>
         <div class="reg-contents1">
           <div class="reg-contents2">
-            <span class="indispensable">必須</span>
+            <span class="indispensable1">任意</span>
             <p class="reg-contents-p">建物名</p>
           </div>
           <div class="reg-contents3">
@@ -151,7 +162,7 @@
         </div>
         <div class="reg-contents1">
           <div class="reg-contents2">
-            <span class="indispensable">必須</span>
+            <span class="indispensable1">任意</span>
             <p class="reg-contents-p">建物名</p>
           </div>
           <div class="reg-contents3">

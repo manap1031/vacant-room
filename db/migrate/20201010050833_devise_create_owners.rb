@@ -16,7 +16,6 @@ class DeviseCreateOwners < ActiveRecord::Migration[6.0]
       t.string :phone_number,         null: false
       t.string :gender,               null: false
       t.date   :birthday,             null: false
-      t.integer :age,                 null: false
       t.string :company_name,         null: false
       t.string :company_name_kana,    null: false
       t.string :company_postal_code,  null: false
