@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2020_10_10_050833) do
     t.string "phone_number", null: false
     t.string "gender", null: false
     t.date "birthday", null: false
-    t.integer "age", null: false
     t.string "company_name", null: false
     t.string "company_name_kana", null: false
     t.string "company_postal_code", null: false
@@ -73,6 +72,7 @@ ActiveRecord::Schema.define(version: 2020_10_10_050833) do
     t.string "building", null: false
     t.integer "price", null: false
     t.text "comment", null: false
+    t.integer "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -30,10 +30,10 @@
               <% if owner_signed_in? && current_owner.id %>
                 <div class="owner-log1">
                   <div class="owner-login">
-                    <%= link_to "ログアウト", destroy_owner_session_path, class: "owner-login1", method: :delete %>
+                    <a class="owner-login1" href="/rooms/new">投稿する</a>
                   </div>
                   <div class="owner-login">
-                    <a class="owner-login1" href="/rooms/new">投稿する</a>
+                   <%= link_to "ログアウト", destroy_owner_session_path, class: "owner-login1", method: :delete %>
                   </div>
                 </div>
               <% else%>
