@@ -1,0 +1,86 @@
+.reg-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.reg-title1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.reg-title-line{
+  border-left: 3px solid chocolate;
+}
+.reg-main{
+  display: flex;
+}
+.reg-left{
+  /* background-color: aquamarine; */
+  width: 50%;
+}
+.reg-right{
+  /* background-color: chartreuse; */
+  width: 50%;
+}
+.reg-contents1{
+  /* width: 100%; */
+  height: 50PX;
+  display: flex;
+  justify-content: center;
+}
+.reg-contents2{
+  background-color: coral;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #4c4c4c;
+}
+.reg-contents-p{
+  font-weight: bold;
+}
+.reg-contents-p1{
+  margin: 0 10px;
+  font-weight: bold;
+}
+.reg-contents3{
+  background-color: cornsilk;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #4c4c4c;
+}
+.reg-file-field{
+  font-weight: bold;
+}
+.reg-field{
+  height: 30px;
+  width: 200px;
+  padding: 0 5px;
+}
+
+.reg-btn{
+  text-align: center;
+  margin-top: 20px;
+}
+.reg-btn2{
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  color: #4c4c4c;
+  border: solid 2px #4c4c4c;
+  background-color: whitesmoke;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.reg-btn2:hover{
+  background-color: #4c4c4c;
+  border: solid 2px whitesmoke;
+  color: whitesmoke;
+}

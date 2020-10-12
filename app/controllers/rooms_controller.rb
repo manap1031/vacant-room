@@ -1,7 +1,9 @@
 class RoomsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @rooms = Room.all
+    
   end
 
   def new
@@ -46,7 +48,13 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:room_name, :postal_code, :prefecture_id, :city, :town, :phone_number, :building, :price, :comment, :image, images: [])
+    params.require(:room).permit(:room_name, :postal_code, :prefecture_id, :city, :town, :phone_number, :building, :price, :comment, :image, images: []).merge(owner_id: current_owner.id)
   end
 
+  def move_to_index
+    unless owner_signed_in?
+      redirect_to action: :index
+    end
+  end
 end
+

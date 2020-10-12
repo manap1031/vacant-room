@@ -1,0 +1,41 @@
+<div class="background">
+  
+  <h1 class="reg-title1"><span class="reg-title-line"></span>オーナーログイン</h1>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+   <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">emila</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.email_field :email, placeholder: "注意:@を付ける", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">password</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.password_field :password, placeholder: "注意:英数字６文字以上", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">password(確認)</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.password_field :password_confimation, placeholder: "password(確認)", class: "reg-field" %></p>
+          </div>
+        </div>
+  
+
+    <div class="reg-btn">
+      <%= f.submit "ログイン", class: "reg-btn2" %>
+    </div>
+   <% end %>
+
+</div>

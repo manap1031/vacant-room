@@ -10,6 +10,7 @@ class CreateRooms < ActiveRecord::Migration[6.0]
       t.string  :building,           null: false
       t.integer :price,              null: false
       t.text    :comment,            null: false
+      t.integer :owner_id,           null: false
       t.timestamps
     end
   end

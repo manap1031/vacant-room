@@ -24,23 +24,18 @@ header {
                 0px  2px 1px #4c4c4c,
                -2px  0px 1px #4c4c4c,
                 0px -2px 1px #4c4c4c;
-};
-
+}
 .title:after{
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 5px #4d546b;
+  /* border-bottom: solid 5px #4d546b; */
   bottom: -5px;
   width: 30%;
 }
-
-
 #nav-drawer {
   position: relative;
 }
-
-
 /*チェックボックス等は非表示に*/
 .nav-unshown {
   display:none;
@@ -128,4 +123,67 @@ footer{
   padding-top: 10px;
   text-align: center;
   opacity: .5;
+}
+
+/* サイド部分 */
+.side-header-title{
+  padding:10px;
+  background-image: url(main.jpg);
+  background-size: cover;
+  height: 150px;
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+}
+.side-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(161, 157, 157);
+  text-shadow:  2px  2px 1px #4c4c4c,
+               -2px  2px 1px #4c4c4c,
+                2px -2px 1px #4c4c4c,
+               -2px -2px 1px #4c4c4c,
+                2px  0px 1px #4c4c4c,
+                0px  2px 1px #4c4c4c,
+               -2px  0px 1px #4c4c4c,
+                0px -2px 1px #4c4c4c;
+}
+.side-title1{
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(161, 157, 157);
+  text-shadow:  2px  2px 1px #4c4c4c,
+               -2px  2px 1px #4c4c4c,
+                2px -2px 1px #4c4c4c,
+               -2px -2px 1px #4c4c4c,
+                2px  0px 1px #4c4c4c,
+                0px  2px 1px #4c4c4c,
+               -2px  0px 1px #4c4c4c,
+                0px -2px 1px #4c4c4c;
+}
+.owner-log{
+  margin-top: 20px;
+  text-align: center;
+}
+.owner-log2{
+  display: flex;
+  justify-content: space-around;
+}
+.owner-login1{
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  color: #4c4c4c;
+  border: solid 2px #4c4c4c;
+  background-color: whitesmoke;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.owner-login1:hover{
+  background-color: #4c4c4c;
+  border: solid 2px whitesmoke;
+  color: whitesmoke;
 }
