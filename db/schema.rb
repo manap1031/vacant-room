@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2020_10_10_050833) do
     t.date "birthday", null: false
     t.integer "age", null: false
     t.string "company_name", null: false
+    t.string "company_name_kana", null: false
+    t.string "company_postal_code", null: false
     t.string "company_city", null: false
     t.string "company_town", null: false
     t.string "company_building", null: false

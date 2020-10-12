@@ -18,6 +18,8 @@ class DeviseCreateOwners < ActiveRecord::Migration[6.0]
       t.date   :birthday,             null: false
       t.integer :age,                 null: false
       t.string :company_name,         null: false
+      t.string :company_name_kana,    null: false
+      t.string :company_postal_code,  null: false
       t.string :company_city,         null: false
       t.string :company_town,         null: false
       t.string :company_building,     null: false

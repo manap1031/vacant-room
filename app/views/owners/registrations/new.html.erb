@@ -1,115 +1,205 @@
-<h1 class="reg-title"><span class="reg-title-line"></span>オーナー会員登録</h1>
+<div class="background">
+  <h1 class="reg-title1"><span class="reg-title-line"></span>オーナー会員登録</h1>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "owners/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "owners/shared/error_messages", resource: resource %>
 
-  <div class="reg-main">
+    <div class="reg-main">
 
-    <div class="reg-left">
-      <h1 class="reg-title"><span class="reg-title-line"></span>オーナー情報</h1>
+      <div class="reg-left">
+        <h1 class="reg-title"><span class="reg-title-line"></span>オーナー情報</h1>
 
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">お名前</p>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">お名前</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :owner_name, placeholder: "例:山田 太郎", class: "reg-field" %></p>
+          </div>
         </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :owner_name, placeholder: "例:山田 太郎", class: "reg-field" %></p>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">お名前(カナ)</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :owner_name_kana, placeholder: "例:ヤマダ タロウ", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">性別</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :gender, class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">誕生日</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :birthday, class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">都道府県</p>
+          </div>
+          <div class="reg-contents3">
+            <p class="reg-contents-p2"><%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"reg-field", id:"prefecture"}) %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">郵便番号</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :postal_code, placeholder: "注意:ハイフンを含む", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">市区町村</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :city, placeholder: "例:恵庭市栄町", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">番地</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :owner_name, placeholder: "例:1-2-3", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">建物名</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :building, placeholder: "例:恵庭ビル3-2", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">電話番号</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :phone_number, placeholder: "0123111234", class: "reg-field" %></p>
+          </div>
         </div>
       </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">お名前(カナ)</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :owner_name_kana, placeholder: "例:ヤマダ タロウ", class: "reg-field" %></p>
-        </div>
-      </div>
-       <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">性別</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :gender, class: "reg-field" %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">誕生日</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :birthday, class: "reg-field" %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">都道府県</p>
-        </div>
-        <div class="reg-contents3">
-          <p class="reg-contents-p2"><%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"new-field", id:"prefecture"}) %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">郵便番号</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :postal_code, placeholder: "注意:ハイフンを含む", class: "reg-field" %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">市区町村</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :city, placeholder: "例:恵庭市栄町", class: "reg-field" %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">番地</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :owner_name, placeholder: "例:1-2-3", class: "reg-field" %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">建物名</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :building, placeholder: "例:恵庭ビル3-2", class: "reg-field" %></p>
-        </div>
-      </div>
-      <div class="reg-contents1">
-        <div class="reg-contents2">
-          <span class="indispensable">必須</span>
-          <p class="reg-contents-p">電話番号</p>
-        </div>
-        <div class="reg-contents3">
-         <p class="reg-contents-p2"><%= f.text_field :phone_number, placeholder: "0123111234", class: "reg-field" %></p>
-        </div>
-      </div>
-     
 
+      <div class="reg-right">
+        <h1 class="reg-title"><span class="reg-title-line"></span>会社情報</h1>
 
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">会社名</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_name, placeholder: "例:株式会社 恵庭", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">会社名(カナ)</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_name_kana, placeholder: "例:カブシキガイシャエニワ", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">郵便番号</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_postal_code, placeholder:"注意:ハイフンを含む", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">市町村区</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_city, placeholder: "恵庭市栄町", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">番地</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_town, placeholder: "1-2-3", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">建物名</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_building, placeholder: "恵庭ビル3-2", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">電話番号</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.text_field :company_phone_number, placeholder: "0123111234", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">emila</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.email_field :email, placeholder: "注意:@を付ける", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">password</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.password_field :password, placeholder: "注意:英数字６文字以上", class: "reg-field" %></p>
+          </div>
+        </div>
+        <div class="reg-contents1">
+          <div class="reg-contents2">
+            <span class="indispensable">必須</span>
+            <p class="reg-contents-p">password(確認)</p>
+          </div>
+          <div class="reg-contents3">
+          <p class="reg-contents-p2"><%= f.password_field :password_confimation, placeholder: "password(確認)", class: "reg-field" %></p>
+          </div>
+        </div>
+      </div>
 
     </div>
-
-
-
-    <div class="reg-right">
-      <h1 class="reg-title"><span class="reg-title-line"></span>会社情報</h1>
+    <div class="reg-btn">
+      <%= f.submit "登録する", class: "reg-btn2" %>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
 
-<%= render "owners/shared/links" %>
