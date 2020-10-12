@@ -1,0 +1,56 @@
+.reg-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.reg-title-line{
+  border-left: 3px solid chocolate;
+}
+.reg-main{
+  display: flex;
+}
+.reg-left{
+  background-color: aquamarine;
+  width: 50%;
+  height: 100vh;
+}
+.reg-right{
+  background-color: chartreuse;
+  width: 50%;
+  height: 100vh;
+}
+.reg-contents1{
+  width: 100%;
+  height: 50PX;
+  display: flex;
+  justify-content: center;
+}
+.reg-contents2{
+  background-color: coral;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #4c4c4c;
+}
+.reg-contents-p{
+  font-weight: bold;
+}
+.reg-contents3{
+  background-color: cornsilk;
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #4c4c4c;
+}
+.reg-file-field{
+  font-weight: bold;
+}
+.reg-field{
+  height: 30px;
+  width: 300px;
+  padding: 0 5px;
+}

@@ -4,8 +4,24 @@ class DeviseCreateOwners < ActiveRecord::Migration[6.0]
   def change
     create_table :owners do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,                null: false, default: ""
+      t.string :encrypted_password,   null: false, default: ""
+      t.string :owner_name,           null: false
+      t.string :owner_name_kana,      null: false
+      t.string :postal_code,          null: false
+      t.integer :prefecture_id,       null: false
+      t.string :city,                 null: false
+      t.string :town,                 null: false
+      t.string :building,             null: false
+      t.string :phone_number,         null: false
+      t.string :gender,               null: false
+      t.date   :birthday,             null: false
+      t.integer :age,                 null: false
+      t.string :company_name,         null: false
+      t.string :company_city,         null: false
+      t.string :company_town,         null: false
+      t.string :company_building,     null: false
+      t.string :company_phone_number, nul: false
 
       ## Recoverable
       t.string   :reset_password_token

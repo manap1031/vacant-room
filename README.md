@@ -135,9 +135,8 @@ gem 'image_processing', '~> 1.2'
 
 | Column                  | Type    | Options     |
 | ----------------------- | ------- | ----------- |
-| first_name              | string  | null: false |
-| last_name               | string  | null: false |
-| first_name_kana         | string  | null: false |
+| owner_name              | string  | null: false |
+| ownert_name_kana        | string  | null: false |
 | postal_code             | string  | null: false |
 | prefectures_id          | integer | null: false |
 | city                    | string  | null: false |
@@ -145,7 +144,7 @@ gem 'image_processing', '~> 1.2'
 | address_number          | string  | null: false |
 | buillding               | string  | null: false |
 | phone_number            | string  | null: false |
-| phone_number2           | string  | null: false |
+| email                   | string  | null: false |
 | gender                  | string  | null: false |
 | birthday                | date    | null: false |
 | age                     | integer | null: false |

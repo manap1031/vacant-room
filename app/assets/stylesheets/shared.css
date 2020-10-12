@@ -25,22 +25,17 @@ header {
                -2px  0px 1px #4c4c4c,
                 0px -2px 1px #4c4c4c;
 }
-
 .title:after{
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 5px #4d546b;
+  /* border-bottom: solid 5px #4d546b; */
   bottom: -5px;
   width: 30%;
 }
-
-
 #nav-drawer {
   position: relative;
 }
-
-
 /*チェックボックス等は非表示に*/
 .nav-unshown {
   display:none;
